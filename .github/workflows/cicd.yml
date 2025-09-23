@@ -45,13 +45,13 @@ jobs:
               run: echo " hello from the test job"
     functional-test: 
         runs-on: ubuntu-latest
-        needs: smoke-test
+        needs: [deploy-dev,smoke-test ]
         steps: 
             - name: Hello from test job
               run: echo " hello from the test job"
     regression-test: 
         runs-on: ubuntu-latest
-        needs: functional-test
+        needs: [deploy-dev,functional-test]
         steps: 
             - name: Hello from test job
               run: echo " hello from the test job"
