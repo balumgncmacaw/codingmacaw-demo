@@ -4,12 +4,12 @@ name: simple CI/CD
 on:
     push:
         branches:
-            - *
+            - "*"
 
 
 jobs: 
     build: 
-        runs-on: 
+        runs-on: ubuntu-latest
         steps: 
             - name: Checkout repository
               uses: actions/checkout@v4
@@ -18,7 +18,7 @@ jobs:
               run : echo " hello from the build job!"
     
     test: 
-        runs-on: 
+        runs-on: ubuntu-latest
         steps: 
             - name: Hello from test job
               run: echo " hello from the test job"
