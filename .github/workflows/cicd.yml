@@ -1,0 +1,30 @@
+
+name: simple CI/CD
+
+on:
+    push:
+        branches:
+            - *
+
+
+jobs: 
+    build: 
+        runs-on: 
+        steps: 
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            
+            - name: Hello From build job
+              run : echo " hello from the build job!"
+    
+    test: 
+        runs-on: 
+        steps: 
+            - name: Hello from test job
+              run: echo " hello from the test job"
+    
+    deploy: 
+        runs-on: 
+        steps: 
+            - name: Hello from deploy job
+              run: echo " hello from the test job"
