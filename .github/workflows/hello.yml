@@ -11,4 +11,4 @@ jobs:
     say-hello:
         runs-on: ubuntu-latest
         steps: 
-            - run: echo "Hello from ${{input.who}}"
+            - run: echo "Hello from ${{inputs.who}}"
