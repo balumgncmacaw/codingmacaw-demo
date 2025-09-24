@@ -21,3 +21,10 @@ jobs:
         if: failure()
         steps: 
             - run: echo " job 1 is failed"
+    
+    
+    call-hello: 
+        uses: ./.github/workflows/hello.yml
+        needs: job1
+        with: 
+            who: "Main Workflow"
